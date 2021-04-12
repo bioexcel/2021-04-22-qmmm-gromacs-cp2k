@@ -5,12 +5,9 @@ exercises: 0
 start: True
 questions:
 - ""
-- ""
-- ""
 objectives:
 - ""
 keypoints:
-- ""
 - ""
 ---
 

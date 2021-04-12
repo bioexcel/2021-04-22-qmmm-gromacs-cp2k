@@ -3,12 +3,9 @@ title: "Practical: GROMACS + CP2K"
 teaching: 60
 questions:
 - ""
-- ""
-- ""
 objectives:
 - ""
 keypoints:
-- ""
 - ""
 ---
 

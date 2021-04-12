@@ -4,12 +4,9 @@ teaching: 75
 exercises: 0
 questions:
 - ""
-- ""
-- ""
 objectives:
 - ""
 keypoints:
-- ""
 - ""
 ---
 
