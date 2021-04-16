@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - ""
 objectives:
-- ""
+- "Short overview of quantum chemistry concepts that will be useful during this course"
 keypoints:
 - ""
 ---
