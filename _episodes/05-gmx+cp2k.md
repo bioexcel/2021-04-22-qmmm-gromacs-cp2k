@@ -32,9 +32,9 @@ Please note that `<...>` in the commands means, that everything, including `<>` 
 >
 >All exercises will require you to submit job for computing using `sbatch run.sh` command. To check status of your job following commands would be useful.  
 >>* `squeue -u <your login name>` - checks status of all your jobs. Output will look like that:  
->>![squeue output](/fig/05-gmx+cp2k/tutorial-squeue-img.png)  
 >>* `scancel <JOBID>` will remove the job, if you occasionally submitted it.
 {: .challenge}
+{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/tutorial-squeue-img.png" alt="squeue output" %}  
 
 ## Setting up tutorial environment
 
@@ -48,12 +48,13 @@ Let’s start the tutorial with the following steps
 
 ## Exercise 1: Setting up simple QM system
 
-1. Go to nma directory:  
+1) Go to nma directory:  
 `cd nma`  
-![stilbene](/fig/05-gmx+cp2k/nma-vacuum.png)  
+{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-vacuum.png" alt="stilbene" %}
 In the directory located forcefield and **nma.pdb** file with a geometry of simple compuond N-Methylacetamide (NMA)  
-You can download it and inspect structure with VMD or PyMOL.
-2. Make topology for the system using the following command:  
+You can download it and inspect structure with VMD or PyMOL.  
+
+2) Make topology for the system using the following command:  
 `gmx_cp2k pdb2gmx -f nma.pdb`  
 choose the following forcefield and water model:  
 ```
@@ -66,7 +67,8 @@ Select the Water Model:
 1: TIP3P       TIP 3-point, recommended, by default uses CHARMM TIP3 with LJ on H
 ```
 Files **topop.top**, **conf.gro** and **posre.itp** should appear in the directory  
-3. Look into Gromacs input file **em.mdp**:  
+
+3) Look into Gromacs input file **em.mdp**:  
 `less em.mdp`  
 The following lines contain QMMM MdModule options:  
 ```
@@ -76,48 +78,53 @@ qmmm-qmgroup             = System ; Index group of QM atoms
 qmmm-qmmethod            = PBE    ; Method to use
 qmmm-qmcharge            = 0      ; Charge of QM system
 qmmm-qmmultiplicity      = 1      ; Multiplicity of QM system
-```
-4. Lets perform energy minimization first for that molecule using QMMM interface  
+```  
+
+4) Lets perform energy minimization first for that molecule using QMMM interface  
 Generate Gromacs-CP2K simulation file:  
 `gmx_cp2k grompp -f em.mdp -p topol.top -c conf.gro -o nma-em.tpr`  
 files **nma-em.tpr**, **nma-em.inp** and **nma-em.pdb** should appear in the directory  
-5. Run QMMM simulation:  
+
+5) Run QMMM simulation:  
 `sbatch run-em.sh`  
-6. While job is running you can check the content of **nma-em.inp**  
+
+6) While job is running you can check the content of **nma-em.inp**  
 `less nma-em.inp`  
-7. At the end of the job use the following command to extract potential energy:  
+
+7) At the end of the job use the following command to extract potential energy:  
 `gmx_cp2k energy`  
 and choose `5  Potential`  
 File **energy.xvg** should appear in the directory. It contains data with Potential energy (kJ/mol) against optimization step. You can open it in Grace or copy data into any other software (i.e. Excel).  
->> ## Energy 
->> ![nma energy](/fig/05-gmx+cp2k/nma-opt-energy.png)
->{: .solution}  
-8. Next we will perform short (100 fs) MD simulation with QM. At first look into the **md-nvt.mdp** file:  
+{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-opt-energy.png" alt="nma energy" %}
+
+8) Next we will perform short (100 fs) MD simulation with QM. At first look into the **md-nvt.mdp** file:  
 `less md-nvt.mdp`  
 It contains parameters for performing dynamics with QM forces in the NVT ensemble at 300K  
-9. Generate Gromacs-CP2K simulation file:  
+
+9) Generate Gromacs-CP2K simulation file:  
 `gmx_cp2k grompp -f md-nvt.mdp -p topol.top -c conf.gro -o nma-nvt.tpr`  
 files **nma-nvt.tpr**, **nma-nvt.inp** and **nma-nvt.pdb** should appear in the directory  
-10. Run QMMM simulation:  
+
+10) Run QMMM simulation:  
 `sbatch run-nvt.sh`  
-11. At the end of the simulation you can download trajectory file **traj.trr** and render it using your favorite software (e.g. VMD, PyMOL).  
+
+11) At the end of the simulation you can download trajectory file **traj.trr** and render it using your favorite software (e.g. VMD, PyMOL).  
 Also you could check temperature as a function of time with the following command:  
 `gmx_cp2k energy`  
 and choose `9  Temperature`  
 File **energy.xvg** will contain data about Temperature (K) against simulation time (ps).  
 Notice, how temperature fluctuates around 300K.  
->> ## Temperature
->> ![nma energy](/fig/05-gmx+cp2k/nma-md-temperature.png)
->{: .solution}  
+{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-md-temperature.png" alt="nma temperature" %}  
 
 #### Congratulations! You have just performed a simple QM simulation using Gromacs-CP2K interface!  
 
 ## Exercise 2: Umbrella sampling simulation with QM/MM
 
-1. Go to stilbene_vacuum directory:  
+1) Go to stilbene_vacuum directory:  
 `cd stilbene_vacuum`  
-![stilbene](/fig/05-gmx+cp2k/stilbene-vacuum.png)  
-2. Look up in the table and pick-up starting structure and dihedral angle value:  
+{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/stilbene-vacuum.png" alt="stilbene" %}  
+
+2) Look up in the table and pick-up starting structure and dihedral angle value:  
 
    Name | Structure | Dihedral angle, φ  
 --------| ------- | -------
@@ -150,44 +157,48 @@ Vinay Kumar Reddy Cheemarla | 26 | -5
 Akilan Rajamani | 27 | 2
 Durai Ananda Kumar | 28 | 9
 Aparna Sai Malisetty | 29 | 16
-Olivier Sheik Amamuddy | 30 | 23
+Olivier Sheik Amamuddy | 30 | 23  
 
-3. Copy chosen starting structure:  
+3) Copy chosen starting structure:  
 `cp eq_gro/md-equilb<your number>.gro ./conf.gro`  
-4. Modify Gromacs input file **qmmm_md_umbrella.mdp** with value of your chosen Dihedral angle:  
+
+4) Modify Gromacs input file **qmmm_md_umbrella.mdp** with value of your chosen Dihedral angle:  
 `sed -i "s/@umbr@/<your dihedral angle>/" qmmm_md_umbrella.mdp`  
 You can also modify *pull-coord1-init* option in the **qmmm_md_umbrella.mdp** file with vim or any other editor.  
-5. Add group of atoms which will be treated with QM to the index file (in that case all atoms are QM):  
+
+5) Add group of atoms which will be treated with QM to the index file (in that case all atoms are QM):  
 `gmx_cp2k make_ndx -f conf.gro -n index.ndx`  
 ```
 > 0
 > name 7 QMatoms
 > q
-```
-6. Generate Gromacs-CP2K simulation file:  
+```  
+
+6) Generate Gromacs-CP2K simulation file:  
 `gmx_cp2k grompp -f qmmm_md_umbrella.mdp -p topol.top -c conf.gro -n index.ndx -o stilbene.tpr`  
 files **stilbene.tpr**, **stilbene.inp** and **stilbene.pdb** should appear in the directory  
-7. Run QMMM simulation:  
+
+7) Run QMMM simulation:  
 `sbatch run.sh`  
-8. While job is running you can check the content of **stilbene.inp**  
+
+8) While job is running you can check the content of **stilbene.inp**  
 `less stilbene.inp`  
 and of **qmmm_md_umbrella.mdp**  
 `less qmmm_md_umbrella.mdp`  
-9. At the end of the job copy files **stilbene.tpr** and **pullx.tpr** into the shared directory. Beware as you need to append filenames with `<your number>` when copying:  
+
+9) At the end of the job copy files **stilbene.tpr** and **pullx.tpr** into the shared directory. Beware as you need to append filenames with `<your number>` when copying:  
 `cp stilbene.tpr /work/ta025/ta025/shared/tutorial/umbrella/stilbene<your number>.tpr`  
 `cp pullx.xvg /work/ta025/ta025/shared/tutorial/umbrella/pullx<your number>.xvg`  
 Check also **pull.xvg** file:  
 `less pullx.xvg`  
 It contains information about chosen coordinate dynamics over the simulation trajectory. By performing that sampling over the many points along reaction coordinate and gathering all *.tpr and pullx.xvg files you could produce free-energy profile of the reaction with `gmx_cp2k wham` tool.  
-10. After gathering files from all participants, trainer will generate free energy profile **/work/ta011/ta011/shared/tutorial/umbrella/profile.xvg**  
+
+10) After gathering files from all participants, trainer will generate free energy profile **/work/ta011/ta011/shared/tutorial/umbrella/profile.xvg**  
 It contains data about Free energy (kJ/mol) against Dihedral angle (deg). You can download and open it in Grace or copy data into any other software (i.e. Excel).  
-11. Check the free energy profiles generated from 100 steps (100 fs) and 10000 steps (10 ps) of QMMM MD simulation for each frame from the eq_gro directory: **profile-100fs.xvg** and **profile-10ps.xvg**.
+
+11) Check the free energy profiles generated from 100 steps (100 fs) and 10000 steps (10 ps) of QMMM MD simulation for each frame from the eq_gro directory: **profile-100fs.xvg** and **profile-10ps.xvg**.
 You can open them with Grace or copy data into any other software (i.e. Excel).  
 
-> ## Notice, how important is long sampling! For biological systems at least 30 ps of QMMM simulation per frame is recommended.
->> ## Profiles 
->> ![stilbene sampling](/fig/05-gmx+cp2k/stilbene-vacuum-sampling.png)
-> {: .solution}
-{: .challenge}
+{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/stilbene-vacuum-sampling.png" alt="stilbene sampling" %}  
 
 {% include links.md %}
