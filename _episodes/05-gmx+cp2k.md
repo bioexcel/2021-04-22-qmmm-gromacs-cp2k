@@ -1,5 +1,5 @@
 ---
-title: "Practical: GROMACS + CP2K Part 1"
+title: "Practical: GROMACS + CP2K Part I"
 teaching: 25
 exercises: 50
 questions:
@@ -128,36 +128,36 @@ Notice, how temperature fluctuates around 300K.
 
    Name | Structure | Dihedral angle, φ  
 --------| ------- | -------
-Marco Gallo | 1 | -180
-Unmesh Dutta Chowdhury| 2 | -173
-Victoria Hill | 3 | -166
-Hafiz Saqib Ali | 4 | -159
-Celine Toubin | 5 |  -152
-Bjarte Aaarmo Lund | 6 | -145
-Rajiv Kumar Kar | 7 | -138
-Sudarshan Behera | 8 | -131
-Salome Llabres | 9 | -124
-Afreen Khan | 10 | -117
-Henrique Fernandes | 11 | -110
-Mert Sağıroğlugil | 12 | -103
-Budheswar Dehury | 13 | -96
-Zhe Huai | 14 | -89
-Xinmeng Li | 15 | -82
-André Pina | 16 | -75
-Mohammad Asad | 17 | -68
-Andrey Golovin | 18 | -61
-Subhomoi Borkotoky | 19 | -54
-Tomasz Piskorz | 20 | -47
-Merve Yuce | 21 | -40
-Matthew Fisher | 22 | -33
-Shiv Bharadwaj | 23 | -26
-Ibrahim Boyenle | 24 | -19
-Davide Tiana | 25 | -12
-Vinay Kumar Reddy Cheemarla | 26 | -5
-Akilan Rajamani | 27 | 2
-Durai Ananda Kumar | 28 | 9
-Aparna Sai Malisetty | 29 | 16
-Olivier Sheik Amamuddy | 30 | 23  
+| 1 | -180
+| 2 | -173
+| 3 | -166
+| 4 | -159
+| 5 |  -152
+| 6 | -145
+| 7 | -138
+| 8 | -131
+| 9 | -124
+| 10 | -117
+| 11 | -110
+| 12 | -103
+| 13 | -96
+| 14 | -89
+| 15 | -82
+| 16 | -75
+| 17 | -68
+| 18 | -61
+| 19 | -54
+| 20 | -47
+| 21 | -40
+| 22 | -33
+| 23 | -26
+| 24 | -19
+| 25 | -12
+| 26 | -5
+| 27 | 2
+| 28 | 9
+| 29 | 16
+| 30 | 23  
 
 3) Copy chosen starting structure:  
 `cp eq_gro/md-equilb<your number>.gro ./conf.gro`  
