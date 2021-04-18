@@ -50,7 +50,7 @@ Let’s start the tutorial with the following steps
 
 1) Go to nma directory:  
 `cd nma`  
-{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-vacuum.png" alt="stilbene" %}
+{% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-vacuum.png" alt="nma" %}
 In the directory located forcefield and **nma.pdb** file with a geometry of simple compuond N-Methylacetamide (NMA)  
 You can download it and inspect structure with VMD or PyMOL.  
 
@@ -121,7 +121,7 @@ Notice, how temperature fluctuates around 300K.
 ## Exercise 2: Umbrella sampling simulation with QM/MM
 
 1) Go to stilbene_vacuum directory:  
-`cd stilbene_vacuum`  
+`cd ../stilbene_vacuum`  
 {% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/stilbene-vacuum.png" alt="stilbene" %}  
 
 2) Look up in the table and pick-up starting structure and dihedral angle value:  
