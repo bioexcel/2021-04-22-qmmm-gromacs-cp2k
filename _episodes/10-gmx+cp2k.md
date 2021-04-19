@@ -53,7 +53,7 @@ Let’s start the tutorial with the following steps
 In the directory located forcefield, topology and **stilbene-sol.pdb** file with a geometry of stilbene in the water box  
 You can download it and inspect structure with VMD or PyMOL.  
 
-2) Generate QM/MM index file:  
+2) Generate QMMM index file:  
 `gmx_cp2k make_ndx -f stilbene-sol.pdb`  
 ```
 > 2  
@@ -84,10 +84,10 @@ You can also download trajectory file **traj.trr** and render it using your favo
 
 8) Next we will perform short (100 fs) MD simulation with QMMM. At first look into the **md-qmmm-nvt.mdp** file:  
 `less md-qmmm-nvt.mdp`  
-It contains parameters for performing dynamics with QM forces in the NVT ensemble at 300K  
+It contains parameters for performing dynamics with periodic QMMM forces in the NVT ensemble at 300K  
 
 9) Generate Gromacs-CP2K simulation file:  
-`gmx_cp2k grompp -f md-qmmm-nvt.mdp -p topol.top -c stilbene-sol.pdb -n index.ndx -o stilbene-sol-nvt.tpr`
+`gmx_cp2k grompp -f md-qmmm-nvt.mdp -p topol.top -c stilbene-sol.pdb -n index.ndx -o stilbene-sol-nvt.tpr`  
 files **stilbene-sol-nvt.tpr**, **stilbene-sol-nvt.inp** and **stilbene-sol-nvt.pdb** should appear in the directory  
 
 10) Run QMMM simulation:  
@@ -101,7 +101,7 @@ File **energy.xvg** will contain data about Temperature (K) against simulation t
 Notice, how temperature equilibrates and fluctuates around 300K.  
 {% include figure.html url="" max-width="80%" file="/fig/10-gmx+cp2k/stilbene-md-temperature.png" alt="stilbene temperature" %}  
 
-## Exercise 4: Large protein system setup with QM/MM
+## Exercise 4: Large protein system setup with QMMM
 
 1) Go to phytochrome directory:  
 `cd ../phytochrome`  
