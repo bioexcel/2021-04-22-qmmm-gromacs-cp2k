@@ -66,7 +66,7 @@ From current directory:
 Select the Water Model:
 1: TIP3P       TIP 3-point, recommended, by default uses CHARMM TIP3 with LJ on H
 ```
-Files **topop.top**, **conf.gro** and **posre.itp** should appear in the directory  
+Files **topol.top**, **conf.gro** and **posre.itp** should appear in the directory  
 
 3) Look into Gromacs input file **em.mdp**:  
 `less em.mdp`  
@@ -118,7 +118,7 @@ Notice, how temperature fluctuates around 300K.
 
 #### Congratulations! You have just performed a simple QM simulation using Gromacs-CP2K interface!  
 
-## Exercise 2: Umbrella sampling simulation with QM/MM
+## Exercise 2: Umbrella sampling simulation with QMMM MdModule
 
 1) Go to stilbene_vacuum directory:  
 `cd ../stilbene_vacuum`  
