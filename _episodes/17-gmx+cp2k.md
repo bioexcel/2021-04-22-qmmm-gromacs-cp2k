@@ -172,6 +172,7 @@ First column is an excitation energy (in eV) and second is an oscillator strengt
 Final absorption spectra could be convolved by representing each excitation with gaussian function and sum up over all of them.  
 
 8) Convolve the spectra using provided Python script:  
+`module load cray-python`  
 `./conv.py excitations 0.1 2 5`  
 File **spec.xvg** should appear in the directory. You can open it in Grace or copy data into any other software (i.e. Excel).  
 As an example, convolved spectra with 0.1 eV half-width gaussians over 100fs (100 steps) trajectory:  

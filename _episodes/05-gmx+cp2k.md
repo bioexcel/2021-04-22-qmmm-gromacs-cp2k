@@ -116,7 +116,7 @@ File **energy.xvg** will contain data about Temperature (K) against simulation t
 Notice, how temperature fluctuates around 300K.  
 {% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-md-temperature.png" alt="nma temperature" %}  
 
-#### Congratulations! You have just performed a simple QM simulation using Gromacs-CP2K interface!  
+#### 	
 
 ## Exercise 2: Umbrella sampling simulation with QMMM MdModule
 
@@ -126,38 +126,38 @@ Notice, how temperature fluctuates around 300K.
 
 2) Look up in the table and pick-up starting structure and dihedral angle value:  
 
-   Name | Structure | Dihedral angle, φ  
---------| ------- | -------
-| 1 | -180
-| 2 | -173
-| 3 | -166
-| 4 | -159
-| 5 |  -152
-| 6 | -145
-| 7 | -138
-| 8 | -131
-| 9 | -124
-| 10 | -117
-| 11 | -110
-| 12 | -103
-| 13 | -96
-| 14 | -89
-| 15 | -82
-| 16 | -75
-| 17 | -68
-| 18 | -61
-| 19 | -54
-| 20 | -47
-| 21 | -40
-| 22 | -33
-| 23 | -26
-| 24 | -19
-| 25 | -12
-| 26 | -5
-| 27 | 2
-| 28 | 9
-| 29 | 16
-| 30 | 23  
+Structure | Dihedral angle, φ  
+------- | -------
+1 | -180
+2 | -173
+3 | -166
+4 | -159
+5 |  -152
+6 | -145
+7 | -138
+8 | -131
+9 | -124
+10 | -117
+11 | -110
+12 | -103
+13 | -96
+14 | -89
+15 | -82
+16 | -75
+17 | -68
+18 | -61
+19 | -54
+20 | -47
+21 | -40
+22 | -33
+23 | -26
+24 | -19
+25 | -12
+26 | -5
+27 | 2
+28 | 9
+29 | 16
+30 | 23  
 
 3) Copy chosen starting structure:  
 `cp eq_gro/md-equilb<your number>.gro ./conf.gro`  
