@@ -139,7 +139,7 @@ Insert between `&END DFT` and `&QMMM` lines an additional `&PROPERTIES` section.
 Final result should look like that:  
 ```
   &END DFT
-    &PROPERTIES
+  &PROPERTIES
     &TDDFPT
        NSTATES      5
        MAX_ITER    10
