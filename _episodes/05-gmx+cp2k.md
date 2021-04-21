@@ -116,8 +116,6 @@ File **energy.xvg** will contain data about Temperature (K) against simulation t
 Notice, how temperature fluctuates around 300K.  
 {% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-md-temperature.png" alt="nma temperature" %}  
 
-#### 	
-
 ## Exercise 2: Umbrella sampling simulation with QMMM MdModule
 
 1) Go to stilbene_vacuum directory:  
