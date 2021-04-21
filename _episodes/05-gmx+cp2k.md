@@ -116,8 +116,6 @@ File **energy.xvg** will contain data about Temperature (K) against simulation t
 Notice, how temperature fluctuates around 300K.  
 {% include figure.html url="" max-width="80%" file="/fig/05-gmx+cp2k/nma-md-temperature.png" alt="nma temperature" %}  
 
-#### Congratulations! You have just performed a simple QM simulation using Gromacs-CP2K interface!  
-
 ## Exercise 2: Umbrella sampling simulation with QMMM MdModule
 
 1) Go to stilbene_vacuum directory:  
@@ -126,41 +124,41 @@ Notice, how temperature fluctuates around 300K.
 
 2) Look up in the table and pick-up starting structure and dihedral angle value:  
 
-   Name | Structure | Dihedral angle, φ  
---------| ------- | -------
-| 1 | -180
-| 2 | -173
-| 3 | -166
-| 4 | -159
-| 5 |  -152
-| 6 | -145
-| 7 | -138
-| 8 | -131
-| 9 | -124
-| 10 | -117
-| 11 | -110
-| 12 | -103
-| 13 | -96
-| 14 | -89
-| 15 | -82
-| 16 | -75
-| 17 | -68
-| 18 | -61
-| 19 | -54
-| 20 | -47
-| 21 | -40
-| 22 | -33
-| 23 | -26
-| 24 | -19
-| 25 | -12
-| 26 | -5
-| 27 | 2
-| 28 | 9
-| 29 | 16
-| 30 | 23  
+Structure | Dihedral angle, φ  
+------- | -------
+md-equilb1.gro | -180
+md-equilb2.gro | -173
+md-equilb3.gro | -166
+md-equilb4.gro | -159
+md-equilb5.gro |  -152
+md-equilb6.gro | -145
+md-equilb7.gro | -138
+md-equilb8.gro | -131
+md-equilb9.gro | -124
+md-equilb10.gro | -117
+md-equilb11.gro | -110
+md-equilb12.gro | -103
+md-equilb13.gro | -96
+md-equilb14.gro | -89
+md-equilb15.gro | -82
+md-equilb16.gro | -75
+md-equilb17.gro | -68
+md-equilb18.gro | -61
+md-equilb19.gro | -54
+md-equilb20.gro | -47
+md-equilb21.gro | -40
+md-equilb22.gro | -33
+md-equilb23.gro | -26
+md-equilb24.gro | -19
+md-equilb25.gro | -12
+md-equilb26.gro | -5
+md-equilb27.gro | 2
+md-equilb28.gro | 9
+md-equilb29.gro | 16
+md-equilb30.gro | 23  
 
 3) Copy chosen starting structure:  
-`cp eq_gro/md-equilb<your number>.gro ./conf.gro`  
+`cp eq_gro/<your starting gro> ./conf.gro`  
 
 4) Modify Gromacs input file **qmmm_md_umbrella.mdp** with value of your chosen Dihedral angle:  
 `sed -i "s/@umbr@/<your dihedral angle>/" qmmm_md_umbrella.mdp`  
