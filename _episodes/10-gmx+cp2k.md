@@ -75,25 +75,25 @@ files **stilbene-sol-opt.tpr**, **stilbene-sol-opt.inp** and **stilbene-sol-opt.
 and of **em-qmmm.mdp**  
 `less em-qmmm.mdp`
 
-7) At the end of the job use the following command to extract potential energy:  
+6) At the end of the job use the following command to extract potential energy:  
 `gmx_cp2k energy`  
 and choose `6  Potential`  
 File **energy.xvg** should appear in the directory. It contains data with Potential energy (kJ/mol) against optimization step. You can open it in Grace or copy data into any other software (i.e. Excel).  
 {% include figure.html url="" max-width="80%" file="/fig/10-gmx+cp2k/stilbene-water-energy.png" alt="stilbene energy" %}  
 You can also download trajectory file **traj.trr** and render it using your favorite software (e.g. VMD, PyMOL).  
 
-8) Next we will perform short (100 fs) MD simulation with QMMM. At first look into the **md-qmmm-nvt.mdp** file:  
+7) Next we will perform short (100 fs) MD simulation with QMMM. At first look into the **md-qmmm-nvt.mdp** file:  
 `less md-qmmm-nvt.mdp`  
 It contains parameters for performing dynamics with periodic QMMM forces in the NVT ensemble at 300K  
 
-9) Generate Gromacs-CP2K simulation file:  
+8) Generate Gromacs-CP2K simulation file:  
 `gmx_cp2k grompp -f md-qmmm-nvt.mdp -p topol.top -c stilbene-sol.pdb -n index.ndx -o stilbene-sol-nvt.tpr`  
 files **stilbene-sol-nvt.tpr**, **stilbene-sol-nvt.inp** and **stilbene-sol-nvt.pdb** should appear in the directory  
 
-10) Run QMMM simulation:  
+9) Run QMMM simulation:  
 `sbatch run-nvt.sh`  
 
-11) At the end of the simulation you can download trajectory file **traj.trr** and render it using your favorite software (e.g. VMD, PyMOL).  
+10) At the end of the simulation you can download trajectory file **traj.trr** and render it using your favorite software (e.g. VMD, PyMOL).  
 Also you could check temperature as a function of time with the following command:  
 `gmx_cp2k energy`  
 and choose `10  Temperature`  
