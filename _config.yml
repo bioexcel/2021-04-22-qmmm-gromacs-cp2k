@@ -7,7 +7,7 @@ title: "QM/MM with GROMACS + CP2K"
 
 # Life cycle stage of the lesson
 # possible values: "pre-alpha", "alpha", "beta", "stable"
-life_cycle: "beta"
+life_cycle: "stable"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
