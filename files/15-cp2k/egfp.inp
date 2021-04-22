@@ -44,13 +44,6 @@
      EXTRAPOLATION_ORDER  4
     &END QS
   &END DFT
-  &PROPERTIES
-    &TDDFPT
-       NSTATES      5
-       MAX_ITER    10
-       CONVERGENCE [eV] 1.0e-3
-    &END TDDFPT
-  &END PROPERTIES
   &QMMM
     &CELL
       A 15.620 0.000 0.000
@@ -108,7 +101,7 @@
       PERIODIC XYZ
     &END CELL
     &TOPOLOGY
-      COORD_FILE_NAME egfp-spec.pdb
+      COORD_FILE_NAME egfp.pdb
       COORD_FILE_FORMAT PDB
       CHARGE_EXTENDED TRUE
       CONNECTIVITY OFF
