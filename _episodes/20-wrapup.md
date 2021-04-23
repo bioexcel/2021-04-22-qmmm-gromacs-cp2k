@@ -24,6 +24,8 @@ keypoints:
 
 [BioExcel workshop: Best Practices in QM/MM Simulation of Biomolecular Systems - YouTube playlist](https://www.youtube.com/playlist?list=PLzLqYW5ci-2d-wolQ9CpE4akorB3naRso)
 
+[Trip to the DFT Zoo Paper](https://doi.org/10.1071/CH19023)
+
 [AskBioExcel Forum - QM/MM section](https://ask.bioexcel.eu/c/qmmm-biosim/20)
 
 [Some CP2K QM/MM input file preparation scripts](https://github.com/bioexcel/CP2K_qmmm_input_preparation_scripts)
