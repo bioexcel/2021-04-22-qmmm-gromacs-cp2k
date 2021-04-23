@@ -16,6 +16,8 @@ keypoints:
 
 ## Useful links
 
+[GROMACS version with interface to CP2K](https://gitlab.com/aracsmd/gromacs) (version used on ARCHER2 for this course is 2021.1-plumed-qmmm branch), for installation instructions see INSTALL-dev 
+
 [BioExcel CP2K QM/MM Best Practice Guide](https://docs.bioexcel.eu/qmmm_bpg)
 
 [BioExcel workshop: Best Practices in QM/MM Simulation of Biomolecular Systems](https://bioexcel.eu/qmmm-best-practice-workshop)
@@ -28,7 +30,9 @@ keypoints:
 
 [NMA and DAA QM/MM tutorials adapted to CP2K](https://github.com/bioexcel/cp2K_qmmm_tutorials_for_biological_simulations)
 
-[GROMACS version with interface to CP2K](https://gitlab.com/aracsmd/gromacs) (version used on ARCHER2 for this course is 2021.1-plumed-qmmm branch), for installation instructions see INSTALL-dev 
+[Using AmberTools to prepare for CP2K QM/MM](https://docs.bioexcel.eu/2020_06_09_online_ambertools4cp2k/)
+
+
 
 
 {% include links.md %}
