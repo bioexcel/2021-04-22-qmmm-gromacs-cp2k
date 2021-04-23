@@ -16,6 +16,8 @@ keypoints:
 - "Advanced properties, like absorption spectra could be calculated using external input files"
 ---
 
+[Slides](../slides/QMMM-Tutorial-EPCC.pdf)
+
 ## Preparing for the tutorial
 
 Everything, which is written inside the ```gray box``` are a commands, that should be executed in the terminal window, string-by-string, each following with the ENTER button.  

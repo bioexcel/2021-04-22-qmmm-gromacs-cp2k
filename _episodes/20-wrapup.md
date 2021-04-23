@@ -22,5 +22,6 @@ keypoints:
 
 [PRACE feedback survey](https://events.prace-ri.eu/event/1204/surveys/787)
 
+[GROMACS version with interface to CP2K](https://gitlab.com/aracsmd/gromacs) (version used on ARCHER2 for this course is 2021.1-plumed-qmmm branch), for installation instructions see INSTALL-dev 
 
 {% include links.md %}
