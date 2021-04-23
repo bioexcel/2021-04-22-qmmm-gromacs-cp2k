@@ -26,6 +26,8 @@ keypoints:
 
 [Some CP2K QM/MM input file preparation scripts](https://github.com/bioexcel/CP2K_qmmm_input_preparation_scripts)
 
+[NMA and DAA QM/MM tutorials adapted to CP2K](https://github.com/bioexcel/cp2K_qmmm_tutorials_for_biological_simulations)
+
 [GROMACS version with interface to CP2K](https://gitlab.com/aracsmd/gromacs) (version used on ARCHER2 for this course is 2021.1-plumed-qmmm branch), for installation instructions see INSTALL-dev 
 
 
