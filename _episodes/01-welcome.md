@@ -12,7 +12,7 @@ keypoints:
 - ""
 ---
 
-## Welcome
+## [Welcome](../slides/welcome.pdf)
 
 [BioExcel Overview](../slides/BioExcel.pdf)
 

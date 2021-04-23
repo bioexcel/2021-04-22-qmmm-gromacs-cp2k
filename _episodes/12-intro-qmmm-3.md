@@ -1,6 +1,6 @@
 ---
 title: "Lecture: Introduction to QM/MM - Third part"
-teaching: 30
+teaching: 35
 exercises: 0
 start: True
 questions:
