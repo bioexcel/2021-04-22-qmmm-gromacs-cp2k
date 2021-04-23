@@ -14,9 +14,9 @@ keypoints:
 
 [BioExcel CP2K QM/MM Best Practice Guide](https://docs.bioexcel.eu/qmmm_bpg)
 
-[BioExcel Best Practices in QM/MM Simulation of Biomolecular Systems](https://bioexcel.eu/qmmm-best-practice-workshop)
+[BioExcel workshop: Best Practices in QM/MM Simulation of Biomolecular Systems](https://bioexcel.eu/qmmm-best-practice-workshop)
 
-[BioExcel Best Practices in QM/MM Simulation of Biomolecular Systems - YouTube playlist](https://www.youtube.com/playlist?list=PLzLqYW5ci-2d-wolQ9CpE4akorB3naRso)
+[BioExcel workshop: Best Practices in QM/MM Simulation of Biomolecular Systems - YouTube playlist](https://www.youtube.com/playlist?list=PLzLqYW5ci-2d-wolQ9CpE4akorB3naRso)
 
 [AskBioExcel Forum - QM/MM section](https://ask.bioexcel.eu/c/qmmm-biosim/20)
 
